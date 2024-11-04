@@ -1,0 +1,70 @@
+
+Question- What is tailwind css?
+Answer- Tailwind CSS is a utility-first CSS framework that provides a set of pre-designed utility classes to help 
+you build modern and responsive user interfaces. It's designed to be highly customizable and flexible, allowing 
+developers to quickly create styles without having to write custom CSS.
+
+
+
+
+
+Question- What is the difference between strongly typed and weakly typed language?
+Answer- In a strongly typed language, the data type of a variable is enforced at compile-time. In a weakly typed 
+language, the data type of a variable is not strictly enforced, and type conversions are often implicit.
+ 
+
+
+
+Question- What is typescript?
+Answer- TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical 
+uperset of JavaScript.
+
+
+
+
+Question- How does a typescript code run?
+Answer- Typescript code never runs in your browser. Your browser can only understand javascript. 
+1. Javascript is the runtime language (the thing that actually runs in your browser/nodejs runtime).
+2. Typescript is something that compiles down to javascript.
+3. When typescript is compiled down to javascript, you get type checking (similar to C++). If there is an error, the 
+   conversion to Javascript fails. 
+
+
+
+
+Question- What are the important option in tsconfig file?
+Answer- The important option in tsconfig file are-
+1. target- The target option in a tsconfig.json file specifies the ECMAScript target version to which the TypeScript 
+   compiler will compile the TypeScript code.
+2. rootDir- Where should the compiler look for .ts files.
+3. outDir- Where should the compiler look for split out the .js files.    
+4. removeComments- Weather or not to include comments in the final js file.
+
+
+
+
+Question- What is interfaces in typescript?
+Ansswer- In TypeScript, an interface defines the structure of object by specifying the types of its properties(key).
+
+
+
+
+Question- What is type in typescript?
+Answer- 'type' is often more flexible than interface and can be used in more scenarios. It can represent any type, 
+including primitive types, union types, intersection types, and even mapped types.
+
+
+
+
+Question- What is enums in typescript?
+Answer- Enums (short for enumerations) in TypeScript are a feature that allows you to define a set of named 
+constants. The concept behind an enumeration is to create a human-readable way to represent a set of constant values, 
+which might otherwise be represented as numbers or strings.
+
+
+
+
+Question- What are generics?
+Answer- Generics in TypeScript let you write code that can be used with different types. Instead of specifying the 
+type directly, you use a placeholder called a "type parameter." It's like a box that can hold any type, and you
+decide what type it should hold when you use the code.

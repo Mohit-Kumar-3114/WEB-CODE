@@ -1,0 +1,147 @@
+
+Question- What is docker engine?
+Answer- Docker is a tool that lets developers package their software and all its dependencies into a single unit 
+called a container. These containers can then be easily shared and run on any computer, making it simpler to develop,
+deploy, and manage applications.
+
+
+
+
+Question- What is docker cli?
+Answer- The command line interface lets you talk to the docker engine and lets you start/stop/list containers.
+
+
+
+
+Question- What is docker registry?
+Answer- A Docker registry is a repository for storing and distributing Docker images. It serves as a centralized 
+location where Docker users can upload and share their container images, making them accessible to others for 
+deployment.
+
+
+
+
+Question- What is docker image vs docker container?
+Answer- A Docker image is a lightweight, standalone, executable package that includes everything needed to run a 
+piece of software, including the code, a runtime, libraries, environment variables, and config files. A good mental 
+model for an image is your codebase on github. A container is a running instance of an image. It encapsulates the 
+application or service and its dependencies, running in an isolated environment. A good mental model for a container 
+is when you run node index.js on your machine from some source code you got from github.
+
+
+
+
+Question- What is port mapping?
+Answer- Port mapping in Docker refers to the process of mapping network ports from the Docker container to the host 
+system or to specific ports on the host system. Example, docker run -d -p 27018:27017 mongo, running this command, 
+your web application running inside the Docker container can be accessed by users through port 27018 on the host 
+system, even though it's actually running on port 27017 inside the container.
+
+
+
+
+Question- What are some docker commands?
+Answer- The commands are-
+1. docker images- Shows you all the images that you have on your machine.
+2. docker ps- Shows you all the containers you are running on your machine.
+3. docker run- Lets you start a container, 
+               -p ⇒ let’s you create a port mapping.
+               -d ⇒ Let’s you run it in detatched mode.
+4. docker build- Lets you build an image.
+5. docker push- Lets you push your image to a registry.
+6. docker kill- This command is used to stop a running Docker container.
+7. docker exec- This command is used to execute a command inside a running Docker container.
+
+
+
+
+Question- What is dockerfile?
+Answer- If you want to create an image from your own code, that you can push to dockerhub, you need to create a 
+Dockerfile for your application. A Dockerfile is a text document that contains all the commands a user could call on
+the command line to create an image.
+
+1. FROM node:20: This line specifies the base image to use for the Docker container. It uses an image called node 
+with the tag 20, which implies that it's Node.js version 20. This line instructs Docker to build your image starting 
+from this Node.js base image.
+
+2. WORKDIR /app: This line sets the working directory inside the container to /app. Any subsequent instructions will 
+be executed relative to this directory.
+
+3. COPY . .: This line copies all files and directories from the current directory (the directory containing the 
+Dockerfile) into the /app directory inside the container. The first dot represents the source directory (the current 
+directory), and the second dot represents the destination directory (the /app directory inside the container).
+
+4. RUN npm install: This line runs the npm install command inside the container. This command installs all the 
+dependencies listed in the package.json file of your Node.js project.
+
+5. RUN npx prisma generate: This line runs the npx prisma generate command inside the container. Prisma is a modern 
+database toolkit that is often used with Node.js projects for database access and management. This command generates 
+Prisma client code based on your Prisma schema.
+
+6. RUN npm run build: This line runs the npm run build command inside the container. This command typically builds 
+your Node.js application. The specifics of what this command does depend on how it's configured in your package.json 
+file.
+
+7. EXPOSE 3000: This line exposes port 3000 on the container. It informs Docker that the container will listen on 
+port 3000 at runtime. This does not actually publish the port, but it serves as a form of documentation for 
+developers.
+
+8. CMD ["node", "dist/index.js"]: This line specifies the command to run when the container starts. It launches the 
+Node.js application by executing node dist/index.js. This assumes that your application's entry point file is 
+located at dist/index.js. The CMD instruction provides a default command to execute when the container starts. If 
+you run the container without specifying a command, Docker will run this command.
+
+
+
+
+Question- What are layers in docker?
+Answer- In Docker, layers are a fundamental part of the image architecture that allows Docker to be efficient, fast, 
+and portable. A Docker image is essentially built up from a series of layers, each representing a set of differences 
+from the previous layer.
+
+How layers are made - 
+1. Base Layer: The starting point of an image, typically an operating system (OS) like Ubuntu, Alpine, or any other 
+base image specified in a Dockerfile.
+
+2. Instruction Layers: Each command in a Dockerfile creates a new layer in the image. These include instructions like 
+RUN, COPY, which modify the filesystem by installing packages, copying files from the host to the container, or 
+making other changes. Each of these modifications creates a new layer on top of the base layer.
+
+3. Reusable & Shareable: Layers are cached and reusable across different images, which makes building and sharing 
+images more efficient. If multiple images are built from the same base image or share common instructions, they can 
+reuse the same layers, reducing storage space and speeding up image downloads and builds.
+
+4. Immutable: Once a layer is created, it cannot be changed. If a change is made, Docker creates a new layer that 
+captures the difference. This immutability is key to Docker's reliability and performance, as unchanged layers can 
+be shared across images and containers.
+
+
+
+
+Question- What are volumes in docker?
+Answer- Docker volume is a special folder that Docker creates for storing and sharing data between containers or 
+between a container and your computer. It's like a shared storage space that stays even if you turn off or delete 
+your Docker containers.
+
+
+
+
+Question- What are networks in docker?
+Answer- In Docker, a network is a powerful feature that allows containers to communicate with each other and with 
+the outside world. Docker containers can’t talk to each other by default.
+
+
+
+
+Question- What is docker compose?
+Answer- Docker Compose is a tool designed to help you define and run multi-container Docker applications. With 
+Compose, you use a YAML file to configure your application's services, networks, and volumes. Then, with a single 
+command, you can create and start all the services from your configuration.
+
+
+
+
+Question- What is bind mount?
+Answer- In Docker, a bind mount is a way to mount a directory from the host machine into a container. This means 
+that files and directories in the specified path on the host will be accessible from within the container, and any 
+changes made to them in either the host or the container will be reflected in both places.

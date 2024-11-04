@@ -1,0 +1,56 @@
+
+Question- What is dom?
+Answer- The DOM (Document Object Model) API is a programming interface for web documents. It represents the page so 
+that programs can change the document structure, style, and content. The DOM represents the document as a tree of 
+objects; each object represents a part of the page.The DOM (Document Object Model) allows JavaScript to manipulate 
+the HTML of a web page. Imagine the DOM as a tree-like structure that represents your HTML document. Each element in 
+your HTML, like buttons, paragraphs, and images, is a part of this tree. JavaScript can interact with this tree, 
+changing, adding, or removing elements. It's like giving JavaScript the power to update what you see on a webpage.
+
+
+
+
+Question- What is debouncing and throttling?
+Answer- Debouncing is a technique where you delay the execution of a function until after a certain amount of time 
+has passed. Throttling is a technique in which, no matter how many times the user fires the event, the attached 
+function will be executed only once in a given time interval.
+
+
+
+
+Question- What is window object?
+Answer- The window object represents an open window in a browser. It is browser’s object (not JavaScript’s) & is 
+automatically created by browser. It is a global object with lots of properties & methods.
+
+
+
+
+Question- How can we target element using dom?
+Answer- 1. getElementById() – Selects a single element by its unique `id` attribute.
+2. getElementsByClassName() – Selects all elements with the specified class name, returning an HTMLCollection.
+3. getElementsByTagName() – Selects all elements with a specific tag name, returning an HTMLCollection.
+4. querySelector() – Selects the first element that matches a given CSS selector.
+5. querySelectorAll() – Selects all elements that match a given CSS selector, returning a static NodeList.
+
+
+
+
+Question- Explain some properties of dom manipulation?
+Answer- 1. innerText- Gets/sets the visible text of an element, excluding hidden elements.
+2. innerHTML- Gets/sets the HTML content inside an element, including HTML tags.
+3. textContent- Gets/sets the text content of an element, including hidden elements.
+4. tagName- Returns the name of the tag (in uppercase) of the selected element, such as "DIV" or "SPAN".
+
+
+
+
+Question- What are getAttributes and setAttributes funtions?
+Answer- 1. getAttribute: Retrieves the value of a specified attribute from an HTML element.
+2. setAttribute: Sets or updates the value of a specified attribute on an HTML element.
+
+
+
+
+Question- What are events in js?
+Answer- Events in JavaScript are actions or occurrences (like clicks, key presses, or form submissions) that can be 
+handled using event listeners, e.g., `element.addEventListener('click', function() { /* code */ });`.

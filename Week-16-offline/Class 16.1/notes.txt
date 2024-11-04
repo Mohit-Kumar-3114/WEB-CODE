@@ -1,0 +1,92 @@
+
+Question- What are cookies?
+Answer- Cookies are small pieces of data that websites store on user's device, typically in the user's web browser.
+They can store various types of information, such as authentication tokens, session identifiers, user preferences, 
+and tracking data.
+
+
+
+
+Question- What is the difference between authentication using local storage vs cookies?
+Answer- When users log into a website, they're issued an authentication cookie, which the browser stores locally. 
+This cookie contains a session ID or unique identifier. As users navigate the site, their browser automatically 
+sends this cookie with each request. It helps the server identify them and maintain their logged-in status without 
+needing to re-enter credentials constantly. 
+
+When using local storage for authentication, the process is slightly different from using cookies. Local storage is 
+a feature of web browsers that allows web applications to store data locally within the user's browser. In the case 
+of authentication, the authentication token is typically stored in the local storage after the user logs in. Then, 
+for subsequent requests, the token needs to be explicitly included in the request headers. This means that every 
+request that requires authentication must include the token in the request headers, usually in the form of an 
+Authorization header.
+
+
+
+
+Question- What are the types of cookies?
+Answer- Types of cookies are-
+1. Persistent Cookies: These cookies remain stored on the user's device even after the browser is closed. They have 
+an expiration date or a maximum age set, and they persist until that date or until the user manually clears them.
+2. Session Cookies: These cookies are temporary and are deleted when the user closes the browser or the browsing 
+session ends. They are typically used for storing session-related data and are not stored permanently on the user's 
+device.
+
+
+
+
+Question- What is csrf attacks in cookies?
+Answer- Cookies can store session tokens that authenticate a user to a website. In a CSRF attack, if the attacker 
+can somehow trick the user's browser into sending a cookie along with a fake request, the attacker might be able 
+to perform actions on the user's behalf because the website sees a valid cookie and assumes the user authorized the 
+request. This is known as cross site request forgery attacks.
+
+
+
+
+Question- What are the properties of cookies?
+Answer- 1. SameSite: Controls when cookies are sent in cross-site requests, preventing certain types of attacks.
+2. HttpOnly: Prevents cookies from being accessed by client-side scripts like JavaScript.
+3. Domain: Specifies the domains or subdomains to which a cookie should be sent, managing its scope across different 
+parts of a website or multiple domains.
+
+
+
+
+Question- What are the types of samesite cookie attribute?
+Answer- The SameSite cookie attribute has three main types:
+1. Strict: This is the most secure option. It prevents the browser from sending the cookie along with any cross-site 
+requests, including following links from external sites. This can be beneficial for highly sensitive websites like 
+financial institutions or those dealing with confidential information. However, it can also cause issues with 
+functionality if your website relies on cross-site interactions.
+
+2. Lax (default): This offers a balance between security and usability. The browser will send the cookie along with 
+cross-site requests initiated through GET requests (like following a link) but will not send it with other request 
+methods (like POST requests used in forms) that are more prone to CSRF attacks.
+
+3. None (not recommended): This setting offers no protection against CSRF attacks. The cookie is sent with all 
+requests, regardless of whether they are same-site or cross-site. This is generally not recommended due to the 
+security risks.
+
+
+
+
+Question- Why cookies are preferred over local storage in next.js?
+Answer- User Sign-In:
+1. The user clicks the "Sign In" button and submits their credentials.
+2. The server authenticates the user and responds with either:
+   a. A cookie containing a session token, set in the browser using the Set-Cookie header.
+   b. A token returned in the response body, which the client stores in localStorage.
+
+Accessing the Dashboard Page:
+1. With Cookies: When the user navigates to the dashboard, the browser automatically includes the cookie in the 
+HTTP request headers. The Next.js server can read this cookie directly during the SSR phase to verify the user's 
+authentication status and render the initial html page with personalized data. The server has everything it needs to \
+authenticate the user before the page is even sent to the browser.
+2. With localStorage: If the token is stored in localStorage, the server cannot access it during the initial SSR 
+phase because localStorage is only available on the client side. The initial page rendered by the server may not 
+have user-specific data because the server cannot read the token. Once the page loads and the client-side JavaScript 
+runs, a script reads the token from localStorage, sends it to the server in a new HTTP request (e.g., an API call),
+and updates the page with user-specific content after receiving a response.
+
+
+

@@ -1,0 +1,120 @@
+
+Question- What is the difference between sql and nosql database?
+Answer- SQL-
+1. Relational database management system (RDBMS).
+2. Relational tables with predefined schema.
+3. These databases are best suited for complex queries.
+4. Follows ACID property.
+5. Follows strict schema to store data and slow.
+6. Examples: MySQL, PostgreSQL, Oracle, MS-SQL Server, etc.
+
+NOSQL-
+1. Non-relational or distributed database system.
+2. They have a dynamic schema.
+3. These databases are not so good for complex queries.
+4. Follows CAP(consistency, availability, partition tolerance).
+5. Store data in a schema-less fashion. Extremely lean and fast way to store data. 
+6. Examples: MongoDB, HBase, Neo4j, Cassandra, etc.
+
+
+
+
+Question- What is graph database?
+Answer- Data is stored in the form of a graph. Specially useful in cases where relationships need to be stored 
+(social networks). Example - Neo4j.
+
+
+
+
+Question- What is vector database?
+Answer- Stores data in the form of vectors. Useful in Machine learning. Example - Pinecone.
+
+
+
+
+Question- What is primary key?
+Answer- A primary key or non-null key in a database is a unique identifier for each record or row in a table. 
+
+
+
+
+Question- What is foreign key?
+Answer- A foreign key or referencing key in a database is a field or a set of fields within a table that establishes 
+a link between two tables.
+
+
+
+
+Question- Why cannot we hit databases directly?
+Answer- Hitting the database directly can cause security issues and make it harder to manage and grow your system. 
+Using a middleman like an API or ORM helps keep things safe, organized, and easier to handle as your system gets 
+bigger.
+
+
+
+
+Question- Why not noSQL is better?
+Answer- Can lead to inconsistent database. Can cause runtime errors. It is too flexible for an app that needs 
+strictness. You might think that mongoose does add strictness to the codebase because we used to define a schema 
+there. That strictness is present at the Node.js level, not at the DB level. You can still put in erroneous data in 
+the database that doesn’t follow that schema.
+
+
+
+
+Question- Why SQL is better than noSQL?
+Answer- SQL databases have a strict schema. They require you to-
+1. Define your schema.
+2. Put in data that follows that schema.
+3. Update the schema as your app changes and perform migrations.
+
+There are 4 parts when using an SQL database (not connecting it to Node.js, just running it and putting data in it)-
+1. Running the database.
+2. Using a library that let’s you connect and put data in it.
+3. Creating a table and defining it’s schema.
+4. Run queries on the database to interact with the data (Insert/Update/Delete).
+
+
+
+
+Question- What is psql?
+Answer- psql is a command-line interface (CLI) tool that allows you to interact with a PostgreSQL database server. 
+It provides a terminal-based front-end to PostgreSQL, enabling users to execute SQL queries directly, inspect the 
+database schema, and manage the database.
+
+
+
+
+Question- What is pg?
+Answer- pg is a Node.js library that you can use in your backend app to store data in the Postgres DB (similar to 
+mongoose).
+
+
+
+
+Question- What are relationships in sql?
+Answer- Relationships let you store data in different tables and relate it with each other.
+
+
+
+
+Question- What are transactions in database?
+Answer- A transaction in SQL is a set of one or more database operations (such as inserts, updates, or deletes) that 
+are treated as a single unit of work. It follows the ACID properties (Atomicity, Consistency, Isolation, Durability) 
+to ensure that either all operations within the transaction are completed successfully and permanently saved to the 
+database, or none of them are.
+
+
+
+
+Question- What are joins in sql?
+Answer- In SQL, joins are used to combine rows from two or more tables based on a related column between them. Joins 
+allow you to retrieve data from multiple tables in a single query, enabling you to create more complex result sets.
+
+Types of joins-
+1. Inner joins- Returns rows when there is at least one match in both tables. If there is no match, the rows are not 
+returned.
+2. Left joins- Returns all rows from the left table, and the matched rows from the right table.
+3. Right joins- Returns all rows from the right table, and the matched rows from the left table.
+4. Full joins- Returns rows when there is a match in one of the tables. It effectively combines the results of both 
+LEFT JOIN and RIGHT JOIN.

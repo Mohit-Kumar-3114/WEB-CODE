@@ -1,0 +1,41 @@
+
+Question- What is next auth?
+Answer- NextAuth is a library that lets you do authentication in Next.js.
+
+
+
+
+Question- What is authentication provider in NextAuth?
+Answer- NextAuth supports three broad types of authentication providers:
+1. OAuth Providers: These providers allow users to sign in using their existing accounts from services like Google, 
+Facebook, Twitter, GitHub, and more. This is commonly referred to as "social login."
+2. Email Provider: This provider enables passwordless email login, where users receive a one-time password (OTP) or 
+a magic link via email to sign in.
+3. Credentials Provider: This provider allows you to implement your own custom authentication strategy, such as 
+authenticating users against a username/password database or integrating with an existing authentication system.
+
+
+
+
+Question- What do you mean by the term session?
+Answer- Sessions store user information on the server side, and are identified by a unique session ID. A session ends 
+when the user closes the browser or logs out. Sessions are often used to store user-specific information for a 
+single visit to a website, like login credentials or shopping cart items.
+
+
+
+
+Question- What are session providers in NextAuth?
+Answer- Session providers in NextAuth help to share and manage user login details across the whole app, making sure 
+both the client and server know who is logged in.
+
+
+
+
+Question- What are session callbacks in NextAuth?
+Answer- Session callbacks in NextAuth.js are functions that allow you to customize the content of the session object. 
+They are used to control what information about the user is included in the session, which can then be accessed 
+throughout your application.
+
+
+

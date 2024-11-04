@@ -1,0 +1,45 @@
+
+Question- What is difference between synchronous and asynchronous functions?
+Answer- Synchronous code executes one line at a time, waiting for each line to complete before moving to the next, 
+which can cause delays if an operation takes time. In contrast, asynchronous code allows tasks to happen in the 
+background without blocking other operations, making it ideal for tasks like fetching data. Asynchronous functions 
+use web APIs to handle long-running operations and then use the event loop to process the results, keeping the 
+application responsive by not holding up the main thread.
+
+
+
+
+Question- What is fs.readFile function?
+Answer- The fs.readFile() method is an inbuilt method which is used to read the file. To load the fs module we use 
+require() method. For example: const fs = require("fs"). Syntax-fs.readFile(filename, encoding, callback_function).
+By default encoding is buffer format which is machine readable but we use human readable encoding ie utf-8. If 
+function is not globally found then write npm i fs in integrated terminal.
+
+
+
+
+Question- Who handle js asynchronous code?
+Answer- JS asynchronous code is handled by a c++ library known as libuv which works on node. It gives I/O support
+to js but it does not works on heavy tasks like cpu intensive.
+
+
+
+
+Question- Describe js browser architecture?
+Answer- When synchronous code runs, functions are executed in sequence and added to the call stack, blocking the 
+main thread until they complete. However, asynchronous operations, encountered as functions like setTimeout, 
+fetch follow a different path. Instead of executing immediately, they are delegated to the Web/Node APIs and 
+removed from the call stack, allowing the synchronous code to continue without waiting for their completion. 
+These APIs handle these operations externally, and once they finish, their associated callbacks are placed in 
+the callback queue. The event loop continuously monitors the call stack and the callback queue. When the call 
+stack is empty, the event loop moves callbacks from the queue to the stack for execution, ensuring that 
+asynchronous results are processed without blocking the main thread. This mechanism enables JavaScript to manage 
+both synchronous and asynchronous tasks efficiently, maintaining responsiveness in applications while handling 
+time-consuming operations seamlessly.  
+
+
+
+
+Question- What are web APIs?
+Answer- These are environments where JavaScript asynchronous code runs, providing functionalities beyond the 
+language itself.

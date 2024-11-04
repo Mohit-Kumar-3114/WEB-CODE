@@ -1,0 +1,258 @@
+
+Question- What is bash?
+Answer- Bash stands for "Bourne Again Shell". It's a command-line interpreter or shell for Unix and Linux operating 
+systems. Essentially, it's a program that processes commands entered by a user in the command line interface. Bash 
+commands are instructions or actions given to the shell to perform specific tasks. Here are a few common Bash 
+commands:
+
+1. pwd: Displays present working directories.
+
+2. cd: Changes the current directory.
+
+3. cd ..: Moves to previous directories.
+
+4. cd ../..: Moves to previous to previous directories.
+
+5. ls: Lists files and directories in the current directory.
+       => ls -l: Displays a long format list with detailed information about files and directories.
+       => ls -a: Shows all files including hidden files (those starting with a dot).
+       => ls -h: Prints file sizes in a human-readable format.
+       => ls -S: Sorts files by size.
+       => ls -t: Sorts files by modification time, showing the newest files first.
+       => ls -r: Lists files in reverse order.
+       => ls -R: Lists files recursively, including subdirectories.
+       => ls -i: Displays the inode number of each file.
+       => ls *.txt: List all files in the current directory with .txt extension.
+
+You can combine these options together, such as ls -lha to display a long format list with human-readable file 
+sizes, including hidden files. 
+
+6. clear: Clears the terminal.
+
+7. mkdir: Creates a new directory.
+
+8. touch: Creates an empty file.
+
+9. cp: Copies files into folder.
+
+10. cp -r: Copies folder into another folder.
+
+11. mv: Moves and rename files or directories.
+
+12. cat: Displays the contents of a file.
+         => cat > filename: Creates an empty file.
+         => cat >> filename: Used to add some more content to your file. Then press ctrl+d.
+
+13. vi: vi is a text editor in Unix and Linux systems. 
+        => i: Enters the insert mode, allowing you to start typing and inserting text into the file.
+        => Esc: Takes you back to the command mode from the insert mode.
+        => :q!: Quits the editor without saving changes (force quit).
+        => :wq!: Quits the editor with saving changes.
+
+14. rm: Deletes a file.
+
+15. rm -r: Deletes a folder.
+
+16. node -v: Shows the installed Node.js version if it's present on your system.
+
+17. node a.js: If you have a JavaScript file named a.js in your current directory, you can run it using Git Bash.
+
+18. npm install <package-name>: Install a package locally.
+
+19. npm install -g <package-name>: Install a package globally.
+
+20. npm init -y: Initialise a Node.js project with some default values and package.json file.
+
+21. npm list: View installed packages.
+
+22. head filename.txt: Display the first 10 lines of a file.
+
+23. head -n 15 filename.txt: Display the first 15 lines of a file.
+
+24. tail filename.txt: Display the last 10 lines of a file.
+
+25. tail -n 20 filename.txt: Display the last 20 lines of a file.
+
+26. echo "Hello, World!": Prints "Hello, World!".
+
+27. name="Alice"
+    echo "Hello, $name": Prints "Hello, Alice".
+
+28. echo -e "Line 1\nLine 2": Prints Line 1 and Line 2.    
+
+29. wc filename.txt: Displays the count of lines, words, and characters in filename.txt.
+                     => wc -l filename.txt: Displays only the line count.
+                     => wc -w filename.txt: Displays only the word count.
+                     => wc -c filename.txt: Displays only the byte count (characters).
+                     => wc -l -w -c filename.txt: Displays all counts of lines, words and characters.
+                     => wc -lwc filename.txt: Displays all counts of lines, words and characters.
+                     => echo "Hello World"|wc: Counts lines, words and characters in the output of echo command.                         
+
+
+
+
+Question- What is git?
+Answer- Git is a free and open source version control system. It is cheap, fast and scalable. It tracks changes made
+to the files. It is installed locally on the computer.
+
+
+
+
+Question- What is version control system?
+Answer- A version control system (VCS) is a tool or software that helps manage changes to files and code over time. 
+It allows multiple contributors to work on the same project, tracks modifications, and keeps a history of all 
+changes made to the files.
+
+
+
+
+Question- What is the differnce between centralized and distributed version control system?
+Answer- CVCS-  A version control system where all files and their history are stored in a single central repository. 
+Users must connect to this central server to access or commit changes. Example: SVN (Subversion).
+
+DVCS- A version control system where every user has a full copy of the entire repository, including its history. 
+Changes can be made and committed locally, and synchronized with other repositories when connected. Example: Git.
+
+
+
+
+Question- What is github?
+Answer- Github is a web-based hosting service for git repositories. We can use git without github but we cannot use 
+github without git. It provides a web interfaces to view file changes. It is cloud-based service that allow 
+developer to manage and store their code using git.
+
+
+
+
+Question- What is local repository?
+Answer- A local repository is storage area on your local machine where all the files, metadata, and version history 
+of a project are stored. When you create or clone a Git repository on your computer, it becomes a local repository.
+
+
+
+
+Question- Explain basic workflow of git?
+Answer- Here's a simple breakdown of the basic Git workflow:
+1. Make Changes: Start by making changes to your files in your project’s folder (working directory).
+2. Stage Changes: Once you're happy with the changes, you stage them using the `git add` command. This puts them in 
+the staging area, which is like a holding zone.
+3. Commit Changes: After staging, you commit the changes with `git commit`. This saves a snapshot of your project 
+at that moment in the repository.
+4. Push to Remote: If you’re working with a remote repository (like GitHub), you push your commits using `git push`. 
+This sends your changes to the remote server so others can see and access them.
+5. Pull Updates: If others have made changes, you can pull their updates with `git pull` to keep your local copy up 
+to date.
+This cycle—make changes, stage, commit, push, and pull—forms the core of working with Git.
+
+
+
+
+Question- What is blob?
+Answer- In Git, a blob (short for "binary large object") represents the actual content of a file, like the text or 
+code inside it, but does not contain any meta data about the file. It is a binary file, and in Git database it is 
+named as SHA-1 hash of that file. In git files are not addressed by names, everything is content addressed.
+
+
+
+
+Question- What is tree?
+Answer- A tree, on the other hand, is like a directory that holds references to blobs (files) and other trees 
+(subdirectories). It organizes how the files and folders are structured in a project at a specific point in time.
+
+
+
+
+Question- What is SHA-1?
+Answer- In Git, SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function used to uniquely identify objects 
+such as commits, trees, blobs (file contents), and tags within the Git version control system.
+
+
+
+
+Question- Explain git commands?
+Answer- Git commands are tools used in the Git version control system to manage and track changes in a project. Here
+are some fundamental Git commands:
+
+1. git -v: Display the installed version of Git.
+
+2. git config --global user.name "Mohit": Set the global configuration for the Git user's name to Mohit.
+
+3. git config --global user.email "abc@gmail.com": Set global email for your Git configuration to "abc@gmail.com".
+
+4. git clone <repo_url>: Create a copy of a remote repository onto your local machine.
+
+5. git config -l: Display the current Git configuration settings. 
+
+6. git status: Shows the current status of your Git repository. It displays information about files that are staged, 
+               unstaged, and untracked. 
+
+7. git add .: Add all the modified and new files in the current directory and its subdirectories to staging area. 
+
+8. git add filename: Used to add specific files to the staging area in Git. 
+
+9. git commmit -m "message": Create a new commit in Git with a message describing the changes made in that commit.
+
+10. git push origin main: Push the commits from your local Git repository to remote (Github) repository, specifically 
+                          to the 'main' branch on the remote named 'origin'.
+
+11. git init: Creates an empty git repository.
+
+12. git remote add origin <repo_url>: Connects your local Git repository to remote repository located at <repo_url>.
+
+13. git remote -v: Shows the URLs of the remotes associated with your local Git repository, indicating both the 
+                   fetch and push URLs for each remote.
+
+14. git branch: Lists all local branches in your Git repository and highlights the branch you're currently on with 
+                an asterisk (*).
+
+15. git branch -M name: Renames the current branch to "name" in your Git repository.        
+
+16. git push -u origin main: Push the changes from your local "main" branch to remote repository named "origin" 
+                             and sets it as the upstream branch, allowing future pushes and pulls without 
+                             specifying the remote and branch names.
+
+17. git checkout feature: Switches your working directory to the branch named "feature" in your Git repository, 
+                          allowing you to start working on that branch.                             
+
+18. git checkout -b feature1: Creates a new branch named "feature1" and immediately switches your working 
+                              directory to that newly created branch, allowing you to start working on it.
+
+19. git branch -d feature2: Deletes the specified branch named "feature2" in your Git repository.
+
+20. git diff branchname: Compare the current branch with branchname.
+
+21. git pull origin main: Used to fetch and download content from a remote repo and immediately update the local 
+                          repo to match that content. 
+
+22. git log: Display the commit history in a repository.                          
+
+23. git merge <source_branch>: Integrates the changes from <source_branch> into the currently checked out branch.
+
+24. git reset filename: If you've added changes to the staging area using git add, you can use git reset <filename> 
+                        to remove those changes from the staging area for a specific file.
+
+25. git reset: If you've added changes to the staging area using git add, you can use git reset to remove those 
+               changes from the staging area.
+                       
+26. git reset HEAD~1: Moving back one commit in the commit history relative to the current HEAD position.
+
+27. git reset <commit_hash>: Moves the branch pointer to <commit_hash>. Unstages changes from commits after 
+                             <commit_hash>.
+
+28. git reset --hard <commit_hash>: Moves the branch pointer to <commit_hash>. Discards all changes made after 
+                                    <commit_hash>.\
+
+
+
+
+Question- What are merge conflicts?
+Answer- Merge conflicts happen in Git when two people make changes to the same part of a file in a project, and Git 
+doesn’t know which change to keep. It occurs when you try to merge different versions of a file. Git will ask you to 
+look at the conflicting changes and decide how to combine them. Once you resolve the conflict, you can complete the 
+merge.
+
+
+
+Question- What is fork?
+Answer- A "fork" refers to a copy of a repository (a project's codebase) that is created under a different user's 
+account, organization, or within the same account but as an independent branch.
