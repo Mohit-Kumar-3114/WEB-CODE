@@ -30,7 +30,7 @@ if(str.indexOf("is")){
 let a = "hello hello hello"
 console.log(a.indexOf("hello")) // 0
 console.log(a.lastIndexOf("hello")) // 12
-console.log(a.substr(2,5)) // llo h it starts from 0th index and prints 5 characters
+console.log(a.substr(2,5)) // llo h it starts from 2nd index and prints 5 characters
 console.log(a.replace("hello", "mohit")) // mohit hello hello but original string will never change
 console.log(a) // hello hello hello
 console.log(a.split(" ")) // [ 'hello', 'hello', 'hello' ]  space k around split kr dega 

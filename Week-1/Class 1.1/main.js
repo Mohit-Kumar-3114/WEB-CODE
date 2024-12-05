@@ -85,6 +85,9 @@ console.log("4"*2) // 8
 console.log("2"==2) // true as it is regular equality check
 console.log("2"===2) // false as it is strict equality check
 console.log("2"==-2) // false
+console.log("true"==true) // false as true is considered as 1
+console.log(true==1) // true
+console.log(true===1) // false 
 
 let counter1=1
 counter1++
