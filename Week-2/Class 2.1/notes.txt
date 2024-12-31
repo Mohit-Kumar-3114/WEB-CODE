@@ -47,4 +47,4 @@ Example 2- console.log(myVar); // undefined but let and const shows error
 
 
 Question- What are hof?
-Answer- Higher-order functions are that functions which take another function as an argument.
+Answer- Higher-order functions are that functions which take another function as an argument or return a function as a result.
