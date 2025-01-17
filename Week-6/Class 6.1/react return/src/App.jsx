@@ -7,11 +7,11 @@ function App() {
 
 
 
+
 // It will show error as we can return only a single top level xml
-  //    <div>
   //    <Header title="my name is harkirat" />
   //    <Header title="My name is raman" />
-  //  </div>
+  
 
 
 
