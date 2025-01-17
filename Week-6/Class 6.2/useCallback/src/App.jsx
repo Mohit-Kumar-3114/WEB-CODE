@@ -1,27 +1,29 @@
 import React, { useState, useCallback, memo } from 'react';
 
-const ChildComponent = memo((props) => { // memo is needed to prevent child re-rendering
-  console.log('ChildComponent rendering...');
-  return <button onClick={props.onClick}>click me</button>;
-});
 
 const CallbackExample = () => {
   const [count, setCount] = useState(0);
 
   
-  const handleClick =useCallback( () => {
+  const handleClick = useCallback(() => {
     console.log('Button clicked!');
-  },[]);
+  },[])
 
 
   return (
     <div>
       <button onClick={()=>setCount(count+1)}>increase count</button>
       <p>Count: {count}</p>
-      <ChildComponent onClick={handleClick} />
+      <ChildComponent handleClick={handleClick} />
     </div>
   );
 };
+
+const ChildComponent = memo(({handleClick}) => { // memo is needed to prevent child re-rendering
+  console.log('ChildComponent rendering...');
+  return <button onClick={handleClick}>click me</button>;
+});
+
 
 export default CallbackExample;
 
