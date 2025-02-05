@@ -18,11 +18,11 @@ managing updates efficiently, the Virtual DOM ensures a smoother and faster user
 
 
 Question- What is state, components and re-rendering in react?
-Answer- State is an object that holds information about the current status of the app, like the value of a counter, 
-which can change over time. Components are self-contained, reusable pieces of code that work like JavaScript 
-functions but return HTML. The Button component, for example, takes the state (count) as an input and updates how it 
-looks based on that state. Re-rendering in React refers to the process of updating the visual representation of a 
-component in response to changes in its state or props, ensuring the user interface reflects the latest data.
+Answer- State in React is a way to store and manage data that can change over time like the value of a counter.
+Components are self-contained, reusable pieces of code that work like JavaScript functions but return HTML. The 
+Button component, for example, takes the state (count) as an input and updates how it looks based on that state. 
+Re-rendering in React refers to the process of updating the visual representation of a component in response to 
+changes in its state or props, ensuring the user interface reflects the latest data.
 
 In React, when the state changes, React automatically re-renders the component to reflect that change. This way, 
 your users always see the most up-to-date and accurate information on the screen.
