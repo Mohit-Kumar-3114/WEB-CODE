@@ -1,19 +1,17 @@
-import { useState , useEffect , useRef} from 'react'
+import { useState , useRef} from 'react'
 
 function App() {
   const [count, setCount] = useState(0);
   let a=10;
   let b=useRef(10);
 
-  useEffect(()=>{
     a=a+1;
     b.current=b.current+1
     console.log(`value of a=${a} and value of b=${b.current}`)
-  })
-
+ 
   return (
     <>
-    <button onClick={()=>setCount(count+1)}>count={count }</button>
+    <button onClick={()=>setCount(count+1)}>count={count}</button>
     </>
   )
 }

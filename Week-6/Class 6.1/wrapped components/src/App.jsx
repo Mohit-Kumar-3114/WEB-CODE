@@ -26,8 +26,8 @@ function Card({children,title}) {
 
 export default App
 
-// In React, wrapper components are used to encapsulate and group common styling or thematic elements that need to 
-// be applied consistently across different parts of an application. These components act as containers for specific
-// sections or functionalities, allowing for a clean and modular structure.  
+
+// In React, wrapper components are used to group and apply common styles or functionality across different parts 
+// of the app. They act like containers for sections or features, making the code more organized and reusable.  
 
 // children is simply the content that you pass between the component’s opening and closing tags.

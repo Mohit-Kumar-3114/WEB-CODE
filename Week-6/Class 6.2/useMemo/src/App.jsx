@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMemo } from "react";
 function App() {
   const [counter, setCounter] = useState(0);

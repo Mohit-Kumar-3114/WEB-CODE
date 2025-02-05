@@ -1,11 +1,5 @@
 import { useState } from "react"
 
-function Header({title}) {
-  return <div>
-    {title}
-  </div>
-}
-
 function App() {
   const [firstTitle, setFirstTitle] = useState("my name is mohit");
 
@@ -23,6 +17,13 @@ function App() {
     </div>
   )
 }
+
+function Header({title}) {
+  return <div>
+    {title}
+  </div>
+}
+
 
 export default App
 

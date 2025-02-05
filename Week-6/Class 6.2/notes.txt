@@ -11,8 +11,7 @@ Question- What are the advantage of hooks over class based components?
 Answer- Hooks in React offer a simpler and more concise way to manage state and lifecycle events in functional 
 components compared to class-based components. They eliminate the need for complex class syntax, the use of `this`, 
 and provide a more modular and reusable approach to organizing code. Hooks, such as `useState` and `useEffect`, 
-enhance code readability, promote better separation of concerns, and make testing easier. They also align well with 
-functional programming principles, leading to cleaner and more maintainable code. 
+enhance code readability, promote better separation of concerns, and make testing easier. 
 
 
 
