@@ -16,12 +16,10 @@ const userProfileSchema = zod_1.z.object({
 });
 app.put("/user", (req, res) => {
     const { success } = userProfileSchema.safeParse(req.body);
-    const updateBody = req.body; // how to assign a type to updateBody?
     if (!success) {
         res.status(411).json({});
         return;
     }
-    // update database here
     res.json({
         message: "User updated"
     });

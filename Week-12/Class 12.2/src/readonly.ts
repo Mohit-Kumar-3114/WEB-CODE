@@ -1,4 +1,4 @@
-interface Config {
+type Config= {
     endpoint: string;
     // readonly endpoint:string; endpoint ko hi agr readonly krna ho
     apiKey: string;

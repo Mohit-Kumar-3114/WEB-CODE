@@ -7,13 +7,13 @@ interface User {
 
 type UserProfile = Pick<User, 'name' | 'email'>;
   
-// const displayUserProfile = (user: UserProfile) => {
-//     console.log(`Name: ${user.name}, Email: ${user.email}`);
-// };
-
-const displayUserProfile = ({name,email}: UserProfile) => {
-  console.log(`Name: ${name}, Email: ${email}`);
+const displayUserProfile = (user: UserProfile) => {
+    console.log(`Name: ${user.name}, Email: ${user.email}`);
 };
+
+// const displayUserProfile = ({name,email}: UserProfile) => {
+//   console.log(`Name: ${name}, Email: ${email}`);
+// };
 
 displayUserProfile({name:"mohit",email:"mohit@gmail.com"})
 

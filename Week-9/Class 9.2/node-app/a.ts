@@ -9,14 +9,14 @@
 
 
 // VARIABLES IN TYPESCRIPT
-const x: number = 1;
+const x:number= 1;
 console.log(x); // 1
 
 
 
 
 // FUNCTIONS IN TYPESCRIPT
-let greet1 = (firstName: string):string=>{
+let greet1 = (firstName:string):string=>{
     return "Hello " + firstName; // Hello harkirat
 }
 console.log(greet1("harkirat"))
@@ -47,7 +47,8 @@ console.log(isLegal1(12)); // false
 // CALLBACK FUNCTIONS IN TYPESCRIPT
 function delayedCall(fn:()=>string, delay: number) {
     setTimeout(() => {
-        console.log(fn());
+        let ans=fn();
+        console.log(ans);
     }, delay);
 }
 
@@ -75,6 +76,12 @@ function isLegal2(user: User):boolean {
 function greet2(user : User):void{
     console.log("hi there " + user.firstName) // hi there mohit
 }
+const newObj={
+    firstName:"mohit",
+    lastName:"ahlawat",
+    age: 21 
+}
+isLegal2(newObj)
 isLegal2({
     firstName:"mohit",
     lastName:"ahlawat",
@@ -108,7 +115,7 @@ class Employee implements Person {
         return phrase + " " + this.name
     }
 }
-const e= new Employee("rohit",20)
+const e= new Employee("rohit",12)
 console.log(e.name) // rohit
 console.log(e.greet("hello")) // hello rohit
 
@@ -125,10 +132,13 @@ function print(id: abc) {
 print({
     age:23
 })
+ print({
+    age:"23"
+ })
 
 
 
-
+ 
 // TYPES IN TYPESCRIPT
 type StringOrNumber = string | number | boolean; // Union
 function printId(id: StringOrNumber) {
@@ -224,6 +234,7 @@ app.get("/", (req:any, res:any) => {
 		res.status(ResponseStatus.Success).json(" sab chnga h dar mat ho jayega sab shi");
 })
 app.listen(3000)
+
 
 
 
