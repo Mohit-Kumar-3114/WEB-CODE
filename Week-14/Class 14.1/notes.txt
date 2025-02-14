@@ -10,17 +10,39 @@ Answer- NextJS was a framework that was introduced because of some minor inconvi
 
 
 Question- Why react is not seo optimised?
-Answer- When a website is SEO optimized, it means that it's structured and designed in a way that makes it easier for 
-search engines like Google, Bing, and others to understand its content and relevance to users' search queries. React 
-primarily relies on client-side rendering, where the initial HTML is minimal and content is populated dynamically 
-using JavaScript. The crawlers dont't usually run your JS and render your page to see the final output. 
+Answer- Search engines like Google and Bing use web crawlers (also known as bots or spiders) to discover and index 
+websites. These crawlers visit websites and analyze the HTML content to understand what the website is about and how 
+to rank it in search results. However, traditional client-side rendered (CSR) React applications pose a challenge 
+for SEO because the crawlers typically don't execute JavaScript and render the page to see the final output. 
+Instead, they rely on the initial HTML response received from the server. With SSR, Next.js pre-renders the initial 
+page on the server and sends the fully rendered HTML to the client. This means that search engine crawlers can easily 
+index the content without having to execute JavaScript. 
 
 
 
 
 Question- What is Waterfalling problem in react?
-Answer- The "waterfalling problem" in React, and more broadly in web development, refers to a scenario where data 
-fetching operations are chained or dependent on each other in a way that leads to inefficient loading behavior.
+Answer- The waterfalling problem is a common issue in traditional client-side rendered (CSR) React applications, 
+where data fetching operations are chained or dependent on each other, leading to inefficient loading behavior. Let's 
+understand this problem with an example of a blogging website built with React. Suppose you have a blogging website 
+built with React, and a user visits the homepage. The request cycle might look something like this:
+1. Fetch the index.html from the CDN: The browser first fetches the initial HTML file, which typically contains 
+minimal content and a reference to the JavaScript bundle.
+2. Fetch the script.js from the CDN: After the initial HTML is loaded, the browser fetches the JavaScript bundle, 
+which contains the React application code.
+3. Check if the user is logged in: Once the JavaScript bundle is loaded and executed, the application checks if the 
+user is logged in. If the user is not logged in, they are redirected to the /login page.
+4. Fetch the actual blog posts: If the user is logged in, the application fetches the actual blog post data from an 
+API or a database.
+In this scenario, there are four round trips that happen sequentially, one after the other. The browser has to wait 
+for each step to complete before moving on to the next one, resulting in a "waterfalling" effect. This can lead to 
+slow initial load times and a poor user experience, especially on slower network connections.
+
+Next.js provides several features and optimizations to address the waterfalling problem and improve the overall 
+performance and loading behavior of your React application. Next.js automatically performs code splitting and lazy 
+loading for your application. This means that instead of loading the entire application bundle upfront, Next.js 
+splits the code into smaller chunks and loads them on-demand as needed. This reduces the initial JavaScript payload 
+and improves the initial load time.
 
 
 
@@ -70,21 +92,10 @@ search engine optimization (SEO) since search engine crawlers can easily index t
 
 
 Question- What is static site generation?
-Answer- If a page uses Static Generation, the page HTML is generated at build time. That means in production, the 
-page HTML is generated when you run next build. This HTML will then be reused on each request. It can be cached by a 
-CDN. If you use static site generation, you can defer the expensive operation of rendering a page to the build time 
-so it only happens once. 
-
-
-
-
-Question- What are webhooks?
-Answer- Webhooks are a way for web applications to communicate with each other in real-time. Instead of continuously 
-polling an API for updates, a webhook allows an application to send a request to a specified URL (usually provided 
-by another application) when a certain event occurs. Imagine you're waiting for an important email. Instead 
-of checking your inbox every minute, you set up a special alert that goes off whenever you receive a new email. 
-Webhooks are like those alerts, but for web applications. Instead of constantly asking if something has happened, 
-they wait for an event to occur and then notify you instantly.
+Answer- Static Site Generation (SSG) is a technique where web pages are generated at build time, meaning the HTML 
+files are pre-built and stored on the server or a CDN. When a user requests a page, it is served instantly without 
+needing real-time server processing. This results in faster load times, improved performance, and better SEO since 
+search engines can easily index pre-rendered pages.
 
 
 
