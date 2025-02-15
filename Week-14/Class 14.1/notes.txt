@@ -122,3 +122,14 @@ behavior can lead to the creation of multiple instances of the Prisma client due
 exhaust the database connections, as each Prisma client instance holds its own connection pool. To avoid this issue, 
 it's recommended to create a singleton instance of the Prisma client, ensuring that only one instance is created and 
 reused throughout the application's lifecycle.
+
+
+
+
+Question- Why there is no need of cors in next.js?
+Answer- In traditional web development setups, where the frontend and backend are separate entities, developers 
+often encounter Cross-Origin Resource Sharing (CORS) issues. CORS is a security mechanism that restricts 
+cross-origin requests from one domain to another, which can cause problems when the frontend and backend are hosted 
+on different domains. With Next.js, since both the frontend and backend are part of the same codebase and deployed 
+together, there is no need to worry about CORS issues. All requests from the frontend to the backend are treated 
+as same-origin requests, eliminating the need for complex CORS configurations.

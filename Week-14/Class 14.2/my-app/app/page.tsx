@@ -17,9 +17,9 @@ export default async function Home() {
         <div className="flex justify-center">
             <div className="border p-8 rounded">
                 <div>
-                    Name: {userData?.name}
+                    Name: {userData?.username}
                 </div>
-                
+                Email:
                 {userData?.email}
             </div>
         </div>
@@ -31,6 +31,6 @@ export default async function Home() {
 // email and name rendered on the page. Additionally, if you open the browser's network tab, you should not see any
 // waterfalling effect, as the data is fetched and rendered on the server-side.
 
-// In Next.js, you can define a loading.tsx file (or loading.js for JavaScript) in the same directory as your page
+// In Next.js, you can define a loading.tsx file (or loading.jsX for JavaScript) in the same directory as your page
 // component. This file will be used to render a loading state while the page's async operations, such as data
 // fetching, are in progress.
