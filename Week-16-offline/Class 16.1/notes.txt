@@ -80,7 +80,7 @@ Answer- User Sign-In:
 Accessing the Dashboard Page:
 1. With Cookies: When the user navigates to the dashboard, the browser automatically includes the cookie in the 
 HTTP request headers. The Next.js server can read this cookie directly during the SSR phase to verify the user's 
-authentication status and render the initial html page with personalized data. The server has everything it needs to \
+authentication status and render the initial html page with personalized data. The server has everything it needs to
 authenticate the user before the page is even sent to the browser.
 2. With localStorage: If the token is stored in localStorage, the server cannot access it during the initial SSR 
 phase because localStorage is only available on the client side. The initial page rendered by the server may not 
