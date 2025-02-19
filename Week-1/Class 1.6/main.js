@@ -286,6 +286,7 @@ console.log(gender1) // male
 
 
 
+
 // The join() method joins all the elemnts of an array into a string
 let arrr=[1,2,3]
 console.log(arrr.join(" and ")) // 1 and 2 and 3
