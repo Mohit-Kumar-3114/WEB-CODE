@@ -317,6 +317,6 @@ console.log(str) // hi my name is mohit
 
 
 
-// A polyfill is a piece of code (usually JavaScript) that implements a feature or functionality that is not 
+// A polyfill is a piece of code (usually JavaScript) that implements feature or functionality that is not 
 // natively supported by certain browsers or environments. Polyfills are used to ensure that modern JavaScript 
 // features work in older browsers or environments that do not support them.
