@@ -93,7 +93,7 @@ arr[3]() // hello
 // 1. accumulator: The accumulated value returned from the last callback execution (or the initialValue for the 
 // first iteration).
 // 2. currentValue: The current element being processed in the array.
-// If initial value is not given then arr[0] is treated as initial value
+// If initial value is not given then arr[0] is treated as initial value.
 
 const numbers = [11, 2, 13, 4];
 const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
