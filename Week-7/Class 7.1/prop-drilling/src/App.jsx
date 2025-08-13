@@ -34,11 +34,6 @@ function Buttons({count,setCount}) {
 export default App
 
 
-// Prop drilling refers to the process of passing down data (props) from a parent component to nested child 
-// components through multiple layers in the component tree. In React or other component-based frameworks, 
-// components are often organized in a hierarchical structure, and sometimes, data needs to be passed from a 
-// top-level component to a deeply nested component. Prop drilling involves passing this data through each 
-// intermediate component in the hierarchy until it reaches its intended destination.
-
-// Prop drilling can lead to verbose and boilerplate code, especially in large component trees. Passing the same
-// props through multiple layers of components can make the code harder to read and maintain.
+// Prop drilling means passing data from a parent component to a deeply nested child component by sending it through
+// multiple intermediate components that don’t actually need the data — they just pass it along. The main problem 
+// is that components that don’t even use the data may still re-render when props change.

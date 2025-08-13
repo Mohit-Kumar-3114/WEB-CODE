@@ -4,7 +4,8 @@
 // function Counter() {
 //   const [count, setCount] = useState(100);
 
-//   const increment = () => {
+//   const increment = (name) => {
+//     console.log(name)
 //     setCount(count + 1);
 //   };
 
@@ -16,13 +17,20 @@
 //     <>
 //       <h1>Counter App</h1>
 //       <p>Count: {count}</p>
-//       <button onClick={increment}>Increment</button>
+//       <button onClick={()=>increment("virat")}>Increment</button>
 //       <button onClick={decrement}>Decrement</button>
 //     </>
 //   );
 // }
 
 // export default Counter;
+
+// onClick={decrement} You give React the function itself. React will call decrement() directly when the click 
+// happens. Used when you dont need to pass any arguments to the function.
+
+// onClick={() => decrement()} You give React a new arrow function. When clicked, the arrow function runs first, 
+// and inside it you call decrement(). Used when you need to pass arguments to the function, like in the 
+// increment example where you pass "virat" as an argument.
 
 
 
@@ -42,7 +50,7 @@ function Button(props) {  // ({count,setCount})
   function onButtonClick() {
     props.setCount(props.count + 1);
     // props.setCount(props.count + 1); // do not increment the value 
-    props.setCount(prevCount=>prevCount+1) // it will increment the value 
+    props.setCount(count=>count+1) // it will increment the value 
     // props.setCount(props.count=>props.count+1) // it is wrong syntax so shows error
     
     // The reason is that React batches state updates during the same event for performance, so when you call 

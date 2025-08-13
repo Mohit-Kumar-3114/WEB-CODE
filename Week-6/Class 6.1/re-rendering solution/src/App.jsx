@@ -30,11 +30,8 @@ function Header({title}) {
 
 export default App
 
-// Pushing the state down in React refers to the practice of managing state at the lowest possible level in the 
-// component tree. By doing so, you localize the state to the components that absolutely need it, reducing 
-// unnecessary re-renders in higher-level components.
- 
-// When state is kept at a higher level in the component tree, any changes to that state can trigger re-renders for 
-// all child components, even if they don't directly use or depend on that particular piece of state. However, by 
-// pushing the state down and ensuring that each component only has access to the state it needs, you can minimize 
-// the impact of state changes on the overall component tree.
+// Pushing state down in React means keeping state in the lowest component that actually needs it. When state is 
+// kept at a higher level in the component tree, any changes to that state can trigger re-renders for all child 
+// components, even if they don't directly use that state. However, by pushing the state down to the components 
+// that actually need it, you can minimize unnecessary re-renders beacuse only the components that use the state
+// will re-render when that state changes. 

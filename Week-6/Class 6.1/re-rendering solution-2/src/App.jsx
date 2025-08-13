@@ -21,10 +21,12 @@ function App() {
 }
 
 const Header = memo(({title}) => {
-  return <div>
+  return (
+    <div>
     {title}
   </div>
-})
+)})
+
 
 export default App
 

@@ -1,3 +1,4 @@
+import { use } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -41,9 +42,10 @@ export default App;
 // elements: the current state value and a function that allows you to update that state.
 
 
-// useEffect is another important React hook that allows you to perform side effects in your functional components. 
-// Side effects in React typically include data fetching, subscriptions, or manually changing the DOM. The useEffect 
-// hook takes a function as its first argument. This function contains the code that should be executed as a side 
-// effect. The second argument of useEffect is an array of dependencies. If any of the dependencies change between 
-// renders, the effect function will run again. If the array is empty ([]), the effect runs once after the initial
-// render.
+// useEffect is another important React hook that allows you to perform side effects typically include data fetching, 
+// setting up subscriptions, or manually changing the DOM. The useEffect hook takes a function as its first argument. 
+// This function contains the code that should be executed as a side effect. The second argument of useEffect is an 
+// array of dependencies. The effect runs again whenever the dependencies change. If the array is empty ([]), the 
+// effect runs once after the initial render.
+
+

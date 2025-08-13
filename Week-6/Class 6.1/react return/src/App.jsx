@@ -25,15 +25,12 @@ function App() {
 }
 
 function Header({title}) {
-  return <div>
+  return <>
     {title}
-  </div>
+  </>
 }
 
 export default App
-
-// In React, a component can only return a single root element, commonly wrapped in a parent container (like a div).
-// This rule exists because React needs a single entry point to render and manage the component's output.
 
 // One of the most prominent reasons for it is Reconciliation. The single-root element rule in React facilitates the
 // reconciliation process, where React efficiently updates the real DOM based on changes in the virtual DOM. By 

@@ -18,7 +18,8 @@ function App() {
 
 export default App
 
-// Normal Variable (a): Each render will log the updated value of a, but the value of a will be reset to 10 on each 
-// render because it is reinitialized with each render.
-// Ref Variable (b): The b.current value persists across renders. You will see b.current incrementing with each 
-// render and logging its updated value as the component updates.
+// a is a normal variable. Every time the component re-renders (like when count changes), a is reset to 10 and then
+// incremented to 11. So it does not persist between renders. 
+
+// b is a useRef object. Its .current property persists across renders. Every time the component re-renders, 
+// b.current keeps its previous value, so it increments every time you click the button.

@@ -1,0 +1,22 @@
+
+Question- What are error boundaries in react?
+Answer- In React, Error Boundaries are special components that catch JavaScript errors anywhere in their child 
+component tree, log those errors, and display a fallback UI instead of breaking the entire app. They act like a 
+“try...catch” for React components.
+       Without error boundaries, if a component throws an error during rendering, React will unmount the whole 
+component tree — meaning your UI can completely disappear. Error boundaries let you gracefully handle these crashes 
+and show a friendly message instead.
+
+
+
+
+Question- Explain stric mode in react?
+Answer- Strict Mode in React is a development-only feature that helps you identify potential problems in your code 
+early before they cause bugs in production. Runs only in development — it has no effect in production builds.
+
+
+
+
+Question- Why effects run twice in Strict Mode?
+Answer- In React Strict Mode, effects run twice in development to help find bugs. React mounts your component, runs 
+the effect, removes it, then runs it again to check if your cleanup code works properly.

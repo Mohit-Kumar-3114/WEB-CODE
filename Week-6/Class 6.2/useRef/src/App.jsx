@@ -36,6 +36,6 @@ const divRef = useRef();
 
 export default App
 
-// useRef hook is primarily used for creating mutable object references. While it can be used for various purposes,
-// its most common use case in the context of the DOM is to interact with or reference DOM elements directly. When 
-// a ref is attached to a DOM element, it allows you to access and modify properties of that element.
+// useRef is a hook that allows you to directly access a DOM element without using the methods like 
+// document.getElementById. It is more efficient and cleaner than using the traditional methods of accessing DOM 
+// elements.

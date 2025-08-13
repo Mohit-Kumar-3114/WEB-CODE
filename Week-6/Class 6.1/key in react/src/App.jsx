@@ -26,8 +26,7 @@ function App() {
   return (
     <div>
       <button onClick={addTodo}>Add todo</button>
-      {todos.map(todo => <Todo key={todo.id} title={todo.title} description={todo.description} />)}
-      {/* {todos.map((todo) => <Todo title={todo.title} description={todo.description} />)} */}
+       {todos.map((todo=><Todo key={todo.id} title={todo.title} description={todo.description} />))}
     </div>
   )
 }

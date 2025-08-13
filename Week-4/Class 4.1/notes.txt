@@ -1,11 +1,9 @@
 
 Question- What is dom?
-Answer- The DOM (Document Object Model) API is a programming interface for web documents. It represents the page so 
-that programs can change the document structure, style, and content. The DOM represents the document as a tree of 
-objects; each object represents a part of the page.The DOM (Document Object Model) allows JavaScript to manipulate 
-the HTML of a web page. Imagine the DOM as a tree-like structure that represents your HTML document. Each element in 
-your HTML, like buttons, paragraphs, and images, is a part of this tree. JavaScript can interact with this tree, 
-changing, adding, or removing elements. It's like giving JavaScript the power to update what you see on a webpage.
+Answer- The DOM stands for Document Object Model — it’s a programming interface that represents a web page’s 
+structure as a tree of objects so that code (JavaScript, for example) can interact with it. When your browser loads 
+a webpage, it takes the HTML and turns it into a tree-like structure where each element (<div>, <p>, <img>, etc.) 
+is a node. This structure is the DOM, and it lets you read, modify, add, or remove elements dynamically.
 
 
 

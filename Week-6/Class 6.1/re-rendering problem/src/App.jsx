@@ -28,4 +28,4 @@ function Header({title}) {
 export default App
 
 // The problem is that when we click on button our both header get re-render but we do not want to re-render our 
-// second header as it is static so we will minimise the re-rendering
+// second header as it is static so we will minimise the re-rendering.

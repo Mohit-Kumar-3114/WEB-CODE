@@ -1,20 +1,23 @@
 
 Question- What are hooks in react?
-Answer- In React, hooks are functions that allow functional components to have state and lifecycle features that 
-were previously only available in class components. Hooks were introduced in React 16.8 to enable developers to use 
-state and other React features without writing a class.
-
+Answer- Hooks in React are special functions that let you use React features like state and lifecycle inside 
+functional components without writing a class.
 
 
 
 Question- What are the advantage of hooks over class based components?
 Answer- Hooks in React offer a simpler and more concise way to manage state and lifecycle events in functional 
-components compared to class-based components. They eliminate the need for complex class syntax, the use of `this`, 
-and provide a more modular and reusable approach to organizing code. Hooks, such as `useState` and `useEffect`, 
-enhance code readability, promote better separation of concerns, and make testing easier. 
+components compared to class-based components.They eliminate the need for the this keyword, making code easier to 
+understand and less error-prone.
 
 
 
+
+Question- What are lifecycle events in react?
+Answer- Lifecycle events in React are special methods that get called at different stages of a component’s existence like 
+when it’s created, updated, or removed from the UI. In class components, these are methods like componentDidMount, 
+componentDidUpdate, and componentWillUnmount. In functional components, similar effects are handled using the 
+useEffect hook.
 
 
 

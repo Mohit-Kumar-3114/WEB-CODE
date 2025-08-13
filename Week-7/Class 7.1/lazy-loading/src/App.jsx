@@ -3,7 +3,7 @@
 import { Suspense, lazy } from 'react'
 import './App.css'
 import {BrowserRouter , Routes , Route, useNavigate} from "react-router-dom"
-const Dashboard =lazy(()=>import('./components/dashboard'))
+const Dashboard =lazy(()=>import('./components/dashboard')) 
 const Landing=lazy(()=>import('./components/landing'))
 
 function App() {
@@ -54,3 +54,6 @@ export default App
 // loaded on demand. For instance, navigating to the `/landing` route will only fetch `landing.jsx` at that time,
 // and navigating to `/dashboard` will fetch `dashboard.jsx`, improving performance and reducing the initial load
 // time.
+
+// In React, Suspense is a built in component used with lazy loading to show a fallback UI (like a loader or message) 
+// while your component is still being loaded.

@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
     <div>
-      <div style={{background:"red"}}> 
+      <div> 
         HI I AM CLIENT SIDE ROUTING
       </div>
       <br></br>
