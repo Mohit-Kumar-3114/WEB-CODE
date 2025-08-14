@@ -128,6 +128,7 @@ console.log(p1.name) // harsh
 p1.name="mohit"
 console.log(obj.name) // harsh
 console.log(p1.name) // mohit
+console.log(p1) // { name: 'mohit' }
 
 
 

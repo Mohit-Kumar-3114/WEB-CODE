@@ -14,15 +14,14 @@ function is called as a callback function.
 
 
 Question- What is setTimeout function?
-Answer- setTimeout() takes a callback function as an argument and executes the callback function after a specified 
-amount of time. It takes two arguments: the first is the callback function to be executed, and the second is the 
-time delay in milliseconds before the callback is invoked.
+Answer- The setTimeout() function executes a function once after a delay. It takes two arguments: the first is the 
+callback function to be executed, and the second is the time delay in milliseconds.
+
 
 
 
 
 Question- What is setInterval function?
-Answer- The setInterval() method calls a function at specified intervals (in milliseconds). The setInterval() 
-method continues calling the function until clearInterval() is called, or the window is closed. It takes two 
-arguments: the first is the callback function to be executed, and the second is the time delay in milliseconds 
-after the callback is called again.
+Answer- The setInterval() function executes a function repeatedly after a specified interval. It takes two arguments: 
+the first is the callback function to be executed, and the second is the time delay in milliseconds after which 
+callback is called again.

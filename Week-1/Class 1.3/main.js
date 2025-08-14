@@ -33,7 +33,7 @@ console.log(a.lastIndexOf("hello")) // 12
 console.log(a.substr(2,5)) // llo h it starts from 2nd index and prints 5 characters
 console.log(a.replace("hello", "mohit")) // mohit hello hello but original string will never change
 console.log(a) // hello hello hello
-console.log(a.split(" ")) // [ 'hello', 'hello', 'hello' ]  space k around split kr dega 
+console.log(a.split(" ")) // [ 'hello', 'hello', 'hello' ]  space k around split kr dega array m 
 
 let b ="    Hi     "
 console.log(b.trim()) // Hi it will remove all spaces 
@@ -266,8 +266,8 @@ const sampleObject = {
 };
 objectMethods(sampleObject);
 
-for(let key in sampleObject){
-    console.log(sampleObject[key]) // value1 value2 value3 newValue
+for(let ke in sampleObject){
+    console.log(sampleObject[ke]) // value1 value2 value3 newValue
 }
 
 let sampleObject2=sampleObject // shallow copy pointing same object 

@@ -28,15 +28,15 @@ Answer- Internet is a vast network that connects computer all over the world.
 
 
 Question- What are websites and webpages?
-Answer- A website is a collection of many web pages, and web pages are digital files that are written using
-HTML(HyperText Markup Language).
+Answer- A website is a collection of many web pages, and web pages are documents that are displayed in a web 
+browser and are usually written using HTML (structure), CSS (style), and JavaScript (behavior).
 
 
 
 
 Question- What is domain name?
-Answer- Domain name refer to your website address. A domain name is unique and cannot be shared to different
-websites. For example Facebook.com.
+Answer- A domain name is a human-readable address used to access a website on the internet, instead of typing the 
+numerical IP address. A domain name must be unique. For example Facebook.com.
 
 
 
@@ -67,7 +67,6 @@ Answer- A domain name generally has a three-part structure, and each part of the
 
 Question- What is route?
 Answer- A route refers to a specific endpoint or URL (Uniform Resource Locator) within a web application or server. 
-Routes define how an application responds to client requests for specific resources or functionalities.
 
 
 
@@ -103,8 +102,9 @@ HTML describes the structure of a Web page. HTML elements tell the browser how t
 -> The <!DOCTYPE html> declaration defines that this document is an HTML5 document.
 -> The <html> element is the root element of an HTML page and language is english.
 -> The <head> element contains meta information about the HTML page.
--> The <meta charset="UTF-8"> declares page's character encoding. UTF-8 is Unicode Transformation Format. It can 
-   translate unicode character to a matching unique binary string and vice versa.
+-> The <meta charset="UTF-8"> specifies that a web page uses UTF-8 encoding to correctly display characters from all 
+   languages. UTF-8 is Unicode Transformation Format. It can translate unicode character to a matching unique 
+   binary string and vice versa.
 -> The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the 
    page's tab).
 -> The <body> element defines the document's body, and is a container for all the visible contents, such as 

@@ -3,7 +3,8 @@ console.log(b) // undefined
 // console.log(a) // shows error
 // console.log(c) // shows error
 
-let a=10 
+let a
+console.log(a) // undefined  
 a=20
 console.log(a) // 20
 
@@ -156,4 +157,5 @@ const m=["mohit",2,{name:"virat",color:"red"}]
 const j=["rohit",1,{name:"virat", color:"red"}]
 console.log(m[2].name==j[2].name) // true
 console.log(m[2]==j[2]) // false these are objects
+
 

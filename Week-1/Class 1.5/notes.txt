@@ -1,10 +1,8 @@
 
 Question- What is difference between synchronous and asynchronous functions?
-Answer- Synchronous code executes one line at a time, waiting for each line to complete before moving to the next, 
-which can cause delays if an operation takes time. In contrast, asynchronous code allows tasks to happen in the 
-background without blocking other operations, making it ideal for tasks like fetching data. Asynchronous functions 
-use web APIs to handle long-running operations and then use the event loop to process the results, keeping the 
-application responsive by not holding up the main thread.
+Answer- A synchronous function executes line by line, one after another. Each step waits for the previous one to 
+finish before moving on. An asynchronous function allows tasks to run in the background, so the program doesn’t wait 
+for them to finish. Other code can execute in the meantime.
 
 
 

@@ -9,8 +9,8 @@ is a node. This structure is the DOM, and it lets you read, modify, add, or remo
 
 
 Question- What is debouncing and throttling?
-Answer- Debouncing is a technique where you delay the execution of a function until after a certain amount of time 
-has passed. Throttling is a technique in which, no matter how many times the user fires the event, the attached 
+Answer- Debouncing is a technique where a function is executed only after a certain amount of time has passed since
+the last event. Throttling is a technique in which, no matter how many times the user fires the event, the attached 
 function will be executed only once in a given time interval.
 
 
